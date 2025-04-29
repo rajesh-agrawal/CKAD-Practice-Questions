@@ -283,6 +283,9 @@ kubectl get po -n namespace2
 
 ```
 // get the top 3 hungry pods
+Option 1:
+kubectl top pod -A --sort-by=cpu
+Option 2:
 kubectl top pod --all-namespaces | sort --reverse --key 3 --numeric | head -3
 
 // putting into file
